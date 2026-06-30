@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Umme Habiba – Software Engineering Student, Web Developer & AI Enthusiast. Turning ideas into intelligent solutions." />
+  <title>Umme Habiba — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>UH<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta btn-primary">Hire Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-grid"></div>
+    <div class="hero-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">Umme</span>
+        <span class="name-line gradient-text">Habiba</span>
+      </h1>
+
+      <div class="hero-title reveal-up">
+        <span class="title-static">I build</span>
+        <span class="title-typed" id="typedText"></span>
+        <span class="title-cursor">|</span>
+      </div>
+
+      <p class="hero-tagline reveal-up">
+        Turning Ideas into <em>Intelligent Solutions</em>
+      </p>
+
+      <div class="hero-actions reveal-up">
+        <a href="#projects" class="btn-primary magnetic">
+          <span>View Projects</span>
+          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="resume.pdf" download class="btn-ghost magnetic">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Download Resume</span>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal-up">
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span>+
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">Years Study</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating tech icons -->
+    <div class="floating-icons">
+      <div class="float-icon fi-1">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="float-icon fi-2">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="float-icon fi-3">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M9 9h.01M15 9h.01M9 15s1 2 3 2 3-2 3-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="float-icon fi-4">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="float-icon fi-5">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">01 — About</div>
+      <h2 class="section-title reveal-up">The person <span class="gradient-text">behind the code</span></h2>
+
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div class="profile-visual">
+            <div class="profile-ring">
+             <div class="profile-avatar">
+  <img src="dp.jpeg" alt="Umme Habiba">
+</div>
+            </div>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Open to work
+            </div>
+          </div>
+
+          <div class="about-info-chips">
+            <div class="chip"><span>📍</span> Pakistan</div>
+            <div class="chip"><span>🎓</span> Software Engineering</div>
+            <div class="chip"><span>💡</span> AI Enthusiast</div>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <p>Hello! I'm <strong>Umme Habiba</strong>, a passionate Software Engineering student with a strong interest in Web Development, Artificial Intelligence, Software Design, and User Experience.</p>
+          <p>I enjoy building innovative software solutions that solve real-world problems and improve user experiences. Throughout my academic journey, I've worked on projects involving web applications, database systems, and software engineering concepts while continuously expanding my technical skills.</p>
+          <p>I believe that technology has the power to create meaningful impact, and my goal is to contribute by developing <em>smart, efficient, and user-friendly</em> software solutions.</p>
+          <p>Beyond technology, I enjoy reading, coding, listening to music, exploring creative design concepts, and learning about emerging technologies.</p>
+
+          <div class="about-interests">
+            <span class="interest-tag">🌐 Web Dev</span>
+            <span class="interest-tag">🤖 AI / ML</span>
+            <span class="interest-tag">🎨 UI/UX</span>
+            <span class="interest-tag">📚 Learning</span>
+            <span class="interest-tag">🎵 Music</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">02 — Skills</div>
+      <h2 class="section-title reveal-up">What I <span class="gradient-text">work with</span></h2>
+
+      <div class="skills-filter reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="languages">Languages</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+        <button class="filter-btn" data-filter="soft">Soft Skills</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+
+        <!-- Programming Languages -->
+        <div class="skill-card tilt-card" data-category="languages">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="s-tag">HTML5</span>
+            <span class="s-tag">CSS3</span>
+            <span class="s-tag">JavaScript</span>
+            <span class="s-tag">PHP</span>
+            <span class="s-tag">Java</span>
+            <span class="s-tag">SQL</span>
+            <span class="s-tag">Python</span>
+            <span class="s-tag">C++</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-card tilt-card" data-category="web">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 3c-2 4-2 14 0 18M3 12c4-2 14-2 18 0" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="s-tag">Responsive Design</span>
+            <span class="s-tag">Frontend Dev</span>
+            <span class="s-tag">Backend Dev</span>
+            <span class="s-tag">REST APIs</span>
+            <span class="s-tag">AJAX</span>
+            <span class="s-tag">JSON</span>
+            <span class="s-tag">XML</span>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-card tilt-card" data-category="frameworks">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Frameworks & DBs</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="s-tag">Spring Boot</span>
+            <span class="s-tag">MySQL</span>
+            <span class="s-tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card tilt-card" data-category="tools">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="s-tag">Git & GitHub</span>
+            <span class="s-tag">VS Code</span>
+            <span class="s-tag">XAMPP</span>
+            <span class="s-tag">Canva</span>
+            <span class="s-tag">Figma</span>
+            <span class="s-tag">MS Office</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card tilt-card" data-category="soft">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="s-tag">Problem Solving</span>
+            <span class="s-tag">Collaboration</span>
+            <span class="s-tag">Communication</span>
+            <span class="s-tag">Leadership</span>
+            <span class="s-tag">Critical Thinking</span>
+            <span class="s-tag">Project Mgmt</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">03 — Projects</div>
+      <h2 class="section-title reveal-up">Things I've <span class="gradient-text">built</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card spotlight-card reveal-up" style="--delay:0s">
+          <div class="project-num">01</div>
+          <div class="project-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="proj-link" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">Smart Transport Portal</h3>
+          <p class="project-subtitle">for University</p>
+          <p class="project-desc">A full-stack web platform enabling students to register, track bus routes, view schedules, and receive real-time notifications — with a powerful admin dashboard.</p>
+
+          <ul class="project-features">
+            <li>Student Registration & Login</li>
+            <li>Route Management System</li>
+            <li>Schedule Tracking</li>
+            <li>Notification System</li>
+            <li>Admin Dashboard</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-role">Full Stack Dev</div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card spotlight-card reveal-up" style="--delay:0.1s">
+          <div class="project-num">02</div>
+          <div class="project-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="proj-link" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">Hospital Appointment</h3>
+          <p class="project-subtitle">Management System</p>
+          <p class="project-desc">A robust healthcare platform built with Spring Boot that streamlines appointment booking, doctor management, and scheduling with a fully-featured admin dashboard.</p>
+
+          <ul class="project-features">
+            <li>Appointment Booking</li>
+            <li>Doctor Management</li>
+            <li>Scheduling System</li>
+            <li>Admin Dashboard</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="tech-badges">
+              <span class="tech-badge">Spring Boot</span>
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">HTML/CSS/JS</span>
+            </div>
+            <div class="project-role">Backend & Full Stack</div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card spotlight-card reveal-up" style="--delay:0.2s">
+          <div class="project-num">03</div>
+          <div class="project-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="proj-link" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">University Website</h3>
+          <p class="project-subtitle">Clone & Redesign</p>
+          <p class="project-desc">A pixel-perfect, fully responsive university website clone featuring interactive navigation, admission pages, contact forms, and a modern design system.</p>
+
+          <ul class="project-features">
+            <li>Responsive Design</li>
+            <li>Admission Pages</li>
+            <li>Contact Forms</li>
+            <li>Interactive Navigation</li>
+          </ul>
+
+          <div class="project-footer">
+            <div class="tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <div class="project-role">Frontend Dev</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-label reveal-up">04 — Education</div>
+      <h2 class="section-title reveal-up">Academic <span class="gradient-text">journey</span></h2>
+
+      <div class="timeline">
+        <div class="timeline-track"></div>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div>
+                <h3>Bachelor of Software Engineering</h3>
+                <p class="tl-school">University · Pakistan</p>
+              </div>
+              <div class="tl-badge">BS</div>
+            </div>
+            <p class="tl-period">2021 — Present</p>
+            <div class="tl-courses">
+              <h4>Relevant Coursework</h4>
+              <div class="course-grid">
+                <span class="course-tag">Data Structures & Algorithms</span>
+                <span class="course-tag">Object-Oriented Programming</span>
+                <span class="course-tag">Database Systems</span>
+                <span class="course-tag">Artificial Intelligence</span>
+                <span class="course-tag">Software Engineering</span>
+                <span class="course-tag">Web Engineering</span>
+                <span class="course-tag">Computer Networks</span>
+                <span class="course-tag">Operating Systems</span>
+                <span class="course-tag">Human Computer Interaction</span>
+                <span class="course-tag">Software Testing & QA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-label reveal-up">05 — Certifications</div>
+      <h2 class="section-title reveal-up">Credentials <span class="gradient-text">& badges</span></h2>
+      <p class="cert-intro reveal-up">A growing collection of courses, bootcamps, and professional milestones — click any card to view the full certificate.</p>
+
+      <div class="cert-grid">
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0s" data-cert="1">
+          <div class="cert-thumb">
+            <img src="certificates/ui-design.jpg" alt="Intro to UI Design Fundamentals certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">Scrimba</span>
+            <h3>Intro to UI Design Fundamentals</h3>
+            <p class="cert-desc">Completed a course consisting of 20 lessons over 1.2 hours.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 9 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Per Harald Borgen, CEO of Scrimba</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.05s" data-cert="2">
+          <div class="cert-thumb">
+            <img src="certificates/open ai.jpg" alt="Learn OpenAI's Assistants API certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">Scrimba</span>
+            <h3>Learn OpenAI's Assistants API</h3>
+            <p class="cert-desc">Successfully completed a targeted Scrimba course containing 8 lessons.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 18 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Per Harald Borgen, CEO of Scrimba</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.1s" data-cert="3">
+          <div class="cert-thumb">
+            <img src="certificates/success.jpg" alt="Success Mindset certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">HP LIFE — HP Foundation</span>
+            <h3>Success Mindset</h3>
+            <p class="cert-desc">Learned how to develop a success mindset, create a vision, set goals and a success plan, and build good business habits for a successful future.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 29 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Stephanie Bormann, Deputy Director, HP Foundation</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.15s" data-cert="4">
+          <div class="cert-thumb">
+            <img src="certificates/strategic planning.jpg" alt="Strategic Planning certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">HP LIFE — HP Foundation</span>
+            <h3>Strategic Planning</h3>
+            <p class="cert-desc">Learned how to develop a SWOT analysis and use the results to select the most effective strategies for business success.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 29 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Stephanie Bormann, Deputy Director, HP Foundation</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.2s" data-cert="5">
+          <div class="cert-thumb">
+            <img src="certificates/agile project.jpg" alt="Agile Project Management certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">HP LIFE — HP Foundation</span>
+            <h3>Agile Project Management</h3>
+            <p class="cert-desc">Learned to define a minimum viable product, compare iterative vs. incremental development, analyze tools like Scrum and Kanban, and apply agile ways of working across teams.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 29 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Stephanie Bormann, Deputy Director, HP Foundation</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.25s" data-cert="6">
+          <div class="cert-thumb">
+            <img src="certificates/cybersecurity.jpg" alt="Introduction to Cybersecurity Awareness certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">HP LIFE — HP Foundation</span>
+            <h3>Introduction to Cybersecurity Awareness</h3>
+            <p class="cert-desc">Learned about common cybersecurity threats and basic ways to keep online data and information more secure.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 31 Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Stephanie Bormann, Deputy Director, HP Foundation</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.3s" data-cert="7">
+          <div class="cert-thumb">
+            <img src="certificates/html css.jpg" alt="Learn HTML and CSS certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">Scrimba</span>
+            <h3>Learn HTML and CSS</h3>
+            <p class="cert-desc">Completed a comprehensive course consisting of 118 lessons over 5.7 hours.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 14 Aug 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Per Harald Borgen, CEO of Scrimba</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.35s" data-cert="8">
+          <div class="cert-thumb">
+            <img src="certificates/graphic design.jpg" alt="Certificate of Internship at ProSensia" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">ProSensia (SMC-Private Limited)</span>
+            <h3>Certificate of Internship</h3>
+            <p class="cert-desc">Proudly awarded for completing a 2-month professional internship (22 June 2025 – 22 August 2025).</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 2 months · Jun–Aug 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Momin Khan, CEO Signature</p>
+          </div>
+        </div>
+
+                <div class="cert-card reveal-up tilt-card" style="--delay:0.35s" data-cert="8">
+          <div class="cert-thumb">
+            <img src="certificates/python programming.jpg" alt="Certificate of Internship at TechnikNest" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">Technik Nest (Private Limited)</span>
+            <h3>Certificate of Internship</h3>
+            <p class="cert-desc">Proudly awarded for completing a 1.5-month professional internship (14th June 2025 to 31st July 2025).</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 1.5 months · Jun–Jul 2025</span>
+            </div>
+            <p class="cert-auth">Authorized by Muhammad Ali, CEO Signature</p>
+          </div>
+        </div>
+        
+        <div class="cert-card reveal-up tilt-card" style="--delay:0.4s" data-cert="9">
+          <div class="cert-thumb">
+            <img src="certificates/devtown.jpg" alt="Generative AI Chatbot Bootcamp certificate" loading="lazy" />
+            <div class="cert-thumb-overlay"><span>View Certificate</span></div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-provider">DevTown × Microsoft Student Chapter (MSIT)</span>
+            <h3>Generative AI Chatbot Bootcamp</h3>
+            <p class="cert-desc">Received in recognition of participation and project completion for the Generative AI Chatbot bootcamp.</p>
+            <div class="cert-meta">
+              <span class="cert-date">📅 2 Mar 2026</span>
+            </div>
+            <p class="cert-auth">Authorized by Ashish Modi, Co-Founder, DevTown</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Lightbox -->
+  <div class="cert-lightbox" id="certLightbox">
+    <button class="cert-lightbox-close" id="certLightboxClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <img src="" alt="Certificate preview" id="certLightboxImg" />
+  </div>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-label reveal-up">06 — Services</div>
+      <h2 class="section-title reveal-up">What I <span class="gradient-text">offer</span></h2>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Website Design</h3>
+          <p>Creating visually stunning, user-centered designs that make your brand unforgettable.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.05s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>Building fast, interactive, and accessible user interfaces with clean modern code.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.1s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 18H3m0-6h18M3 6h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Responsive Web Design</h3>
+          <p>Ensuring perfect experiences across every device, from mobile to ultra-wide screens.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.15s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5.5 8.5l3.5-3.5 3.5 3.5L9 12l-3.5-3.5zM12 15l3-3 3 3-3 3-3-3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>PHP Applications</h3>
+          <p>Developing dynamic, database-driven web applications with robust PHP backends.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.2s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Spring Boot Apps</h3>
+          <p>Building scalable Java backend applications and REST APIs with Spring Boot.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.25s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5" stroke="currentColor" stroke-width="1.5"/><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Database Design</h3>
+          <p>Designing efficient, normalized relational databases that scale with your product.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.3s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting intuitive user experiences through research-driven design and prototyping.</p>
+        </div>
+
+        <div class="service-card reveal-up tilt-card" style="--delay:0.35s">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Software Development</h3>
+          <p>End-to-end software solutions from concept and architecture to launch and beyond.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">07 — Contact</div>
+      <h2 class="section-title reveal-up">Let's <span class="gradient-text">connect</span></h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-lead">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+          <div class="contact-links">
+            <a href="mailto:saeedhabiba001@gmail.com" class="contact-link">
+              <div class="cl-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <span class="cl-label">Email</span>
+                <span class="cl-value">saeedhabiba001@gmail.com</span>
+              </div>
+            </a>
+
+           <!-- Instagram -->
+<a href="https://www.instagram.com/umme.habiba591/" target="_blank" rel="noopener" class="contact-link">
+  <div class="cl-icon">
+    <!-- Instagram Icon -->
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+    </svg>
+  </div>
+  <div>
+    <span class="cl-label">Instagram</span>
+    <span class="cl-value">@umme.habiba591</span>
+  </div>
+</a>
+
+<!-- GitHub -->
+<a href="https://github.com/saeedhabiba" target="_blank" rel="noopener" class="contact-link">
+  <div class="cl-icon">
+    <!-- GitHub Icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.11.79-.25.79-.56v-2.03c-3.2.69-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.6.24 2.78.12 3.07.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+    </svg>
+  </div>
+  <div>
+    <span class="cl-label">GitHub</span>
+    <span class="cl-value">@saeedhabiba</span>
+  </div>
+</a>
+
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/in/umme-habiba-75a728333" target="_blank" rel="noopener" class="contact-link">
+  <div class="cl-icon">
+    <!-- LinkedIn Icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2ZM1.5 8h3V22h-3V8Zm7.5 0h2.88v1.91h.04c.4-.76 1.38-1.56 2.84-1.56C18.3 8.35 20 10.1 20 13.3V22h-3v-7.4c0-1.77-.03-4.04-2.46-4.04-2.46 0-2.84 1.92-2.84 3.91V22h-3V8Z"/>
+    </svg>
+  </div>
+  <div>
+    <span class="cl-label">LinkedIn</span>
+    <span class="cl-value">Umme Habiba</span>
+  </div>
+</a>
+            <div class="contact-link non-link">
+              <div class="cl-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <span class="cl-label">Location</span>
+                <span class="cl-value">Pakistan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <form class="contact-form glass-card reveal-right" id="contactForm">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fname">Name</label>
+      <input type="text" id="fname" name="name" placeholder="Your name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="femail">Email</label>
+      <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="fsubject">Subject</label>
+    <input
+      type="text"
+      id="fsubject"
+      name="subject"
+      placeholder="What's this about?"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="fmsg">Message</label>
+    <textarea
+      id="fmsg"
+      name="message"
+      rows="5"
+      placeholder="Tell me about your project..."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full magnetic">
+    <span id="btnText">Message Me on LinkedIn</span>
+    <svg viewBox="0 0 16 16" fill="none">
+      <path
+        d="M2 8h12M10 4l4 4-4 4"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+
+  <div class="form-success" id="formSuccess" style="display:none;">
+    ✅ Redirecting you to LinkedIn...
+  </div>
+</form>
+
+  <!-- ═══ CTA / RESUME ═══ -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-blob-1"></div>
+      <div class="cta-blob-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content reveal-up">
+        <h2>Let's Build Something<br><span class="gradient-text">Amazing Together</span></h2>
+        <p>Ready to turn your ideas into intelligent, impactful solutions.</p>
+        <div class="cta-actions">
+          <a href="resume.pdf" download class="btn-primary magnetic">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Download Resume</span>
+          </a>
+          <a href="#contact" class="btn-ghost magnetic">
+            <span>Contact Me</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>UH<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Software Engineering Student building intelligent, user-focused solutions.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">Frontend Dev</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Database Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:saeedhabiba001@gmail.com">Email</a></li>
+            <li><a href="https://instagram.com/hodophilegirl001" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Umme Habiba. Crafted with passion & precision.</p>
+        <a href="#hero" class="back-top" aria-label="Back to top">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
