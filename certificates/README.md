@@ -132,4 +132,6 @@ portfolio/
 
 Feel free to connect with me for collaboration, internships, or exciting software development opportunities.
 
+Email: saeedhabiba001@gmail.com
+
 ⭐ If you like this portfolio, don't forget to give this repository a star!
